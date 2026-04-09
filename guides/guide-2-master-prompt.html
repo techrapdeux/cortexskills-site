@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Master Prompt Formula | Cortex Skills</title>
+  <meta name="description" content="A framework for writing prompts that actually work across any AI platform." />
+  <style>
+    :root{--bg:#0B1120;--primary:#7C3AED;--accent:#22D3EE;--cta:#F59E0B;--text:#F1F5F9;--muted:#94A3B8;--card:#111827;--border:rgba(124,58,237,.28)}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65} a{color:var(--accent)}
+    .wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px}.hero,.card{background:linear-gradient(180deg,rgba(124,58,237,.12),rgba(17,24,39,.88));border:1px solid var(--border);border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+    .hero{padding:32px}.card{padding:24px;margin-top:20px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:700}.pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(34,211,238,.1);color:var(--accent);font-size:13px}
+    h1,h2,h3{line-height:1.15;margin:0 0 12px} h1{font-size:42px} h2{font-size:28px;margin-top:8px} h3{font-size:20px} p,li{color:var(--text)} .muted{color:var(--muted)}
+    ul,ol{padding-left:22px} .grid{display:grid;gap:16px}.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.cta{display:inline-block;margin-top:18px;padding:14px 18px;background:var(--cta);color:#1f1302;text-decoration:none;border-radius:999px;font-weight:700}
+    code{background:#020617;padding:2px 6px;border-radius:6px;color:#c4b5fd} pre{background:#020617;padding:16px;border-radius:12px;overflow-x:auto;color:#c4b5fd;font-size:14px;line-height:1.5}
+    .footer{margin-top:24px;font-size:14px;color:var(--muted)} table{width:100%;border-collapse:collapse;margin:12px 0} th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)} th{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+    @media print{.cta{display:none}.wrap{padding:0} body{background:#fff;color:#111}.hero,.card{box-shadow:none;border:1px solid #ddd}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Free Guide 2</div>
+      <h1>The Master Prompt Formula</h1>
+      <p class="muted">A repeatable framework for writing prompts that work across Claude, ChatGPT, OpenClaw, Gemini, and anything else that ships next Tuesday.</p>
+      <p><span class="pill">Works on every major AI platform</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Why most prompts fail</h2>
+      <p>They are too vague, too long, or missing structure. The model is not dumb — it is lost. A good prompt gives a model the same things a good brief gives a human: who you are, what you need, what good looks like, and what to avoid.</p>
+    </section>
+
+    <section class="card">
+      <h2>The RCETO framework</h2>
+      <p>Five components. Use all five, every time.</p>
+      <table>
+        <tr><th>Letter</th><th>Component</th><th>What it does</th></tr>
+        <tr><td><strong>R</strong></td><td>Role</td><td>Who the model is. Sets expertise and perspective.</td></tr>
+        <tr><td><strong>C</strong></td><td>Context</td><td>What the model needs to know. Background, constraints, specifics.</td></tr>
+        <tr><td><strong>E</strong></td><td>Examples</td><td>What good output looks like. One example beats ten instructions.</td></tr>
+        <tr><td><strong>T</strong></td><td>Task</td><td>Exactly what to do. Be specific. Be concrete.</td></tr>
+        <tr><td><strong>O</strong></td><td>Output rules</td><td>Format, length, tone, structure, and what never to include.</td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>RCETO in action</h2>
+      <p><strong>Bad prompt:</strong></p>
+      <pre>Write me a marketing email.</pre>
+      <p><strong>Good prompt:</strong></p>
+      <pre>Role: You are a direct-response copywriter for a B2B SaaS product.
+
+Context: We sell an AI scheduling tool to operations managers
+at mid-size companies. We are running a Black Friday sale — 30% off
+annual plans. Our tone is confident and concise, never salesy.
+
+Example: Subject lines we have used before: "Your ops team
+deserves better than spreadsheet Tetris" and "30% off is live.
+No games, no gimmicks."
+
+Task: Write a 150-word promotional email for this sale.
+Include a subject line, one CTA button, and a one-line P.S.
+
+Output: Plain text. No emojis. Max 150 words. Do not use the
+words "revolutionary," "game-changer," or "unlock."</pre>
+    </section>
+
+    <section class="card">
+      <h2>Platform-specific tips</h2>
+      <div class="grid two">
+        <div>
+          <h3>Claude</h3>
+          <ul>
+            <li>Responds well to explicit role definitions.</li>
+            <li>Honors "never" rules more reliably than most.</li>
+            <li>Give it permission to push back — it will be more useful.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>ChatGPT</h3>
+          <ul>
+            <li>Works best with concrete examples in the prompt.</li>
+            <li>Custom GPTs let you bake RCETO into the system prompt permanently.</li>
+            <li>Use "step by step" when you need structured reasoning.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>OpenClaw</h3>
+          <ul>
+            <li>Use SOUL.md files as persistent identity — your R and O live there permanently.</li>
+            <li>Best for multi-agent setups where each agent owns a different RCETO config.</li>
+            <li>Memory files mean context compounds over time instead of resetting.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Gemini</h3>
+          <ul>
+            <li>Handles long context well — do not be afraid to include more C.</li>
+            <li>Benefits from explicit format instructions in the O section.</li>
+            <li>Good at following structured templates when given one.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick-reference cheat codes</h2>
+      <ul>
+        <li><strong>Sharper output:</strong> Add "Be concise. No filler." to every prompt.</li>
+        <li><strong>Better reasoning:</strong> Add "Think step by step before answering."</li>
+        <li><strong>Fewer hallucinations:</strong> Add "If you are not sure, say so. Do not guess."</li>
+        <li><strong>Consistent tone:</strong> Give one example of the tone you want. The model will mirror it.</li>
+        <li><strong>Structured output:</strong> Specify format explicitly: "Return a markdown table with columns: X, Y, Z."</li>
+      </ul>
+      <a class="cta" href="/guides/">Get the full free guide bundle</a>
+      <div class="footer">Cortex Skills, practical AI systems for real work.</div>
+    </section>
+  </div>
+</body>
+</html>

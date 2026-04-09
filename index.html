@@ -27,6 +27,7 @@
       <nav class="nav">
         <a href="/">Home</a>
         <a href="/products/">Products</a>
+        <a href="/guides/">Guides</a>
         <a href="/blog/">Blog</a>
         <a href="#why-us">About</a>
         <a href="#contact">Contact</a>
@@ -132,13 +133,27 @@
             <h2>Get 3 Free Guides</h2>
             <p>Sharp, practical guides to help you get more out of AI agents without wasting a weekend.</p>
           </div>
-          <form class="capture-form" action="#" method="post" data-form-status="pending-formspree-verification">
+          <form class="capture-form" id="guide-form">
             <label class="sr-only" for="email">Email address</label>
             <input id="email" name="email" type="email" placeholder="Enter your email" required />
-            <input type="hidden" name="_subject" value="Cortex Skills free guides signup" />
-            <input type="hidden" name="source" value="homepage-free-guides" />
-            <button class="btn btn-primary" type="submit">Send Me the Guides</button>
+            <button class="btn btn-primary" type="submit" id="guide-btn">Send Me the Guides</button>
+            <p id="form-msg" style="margin-top:.75rem;font-size:.9rem;display:none"></p>
           </form>
+          <script>
+          document.getElementById('guide-form').addEventListener('submit',function(e){
+            e.preventDefault();
+            var btn=document.getElementById('guide-btn'),msg=document.getElementById('form-msg'),em=document.getElementById('email').value;
+            btn.disabled=true;btn.textContent='Sending...';
+            msg.style.display='none';
+            fetch('/api/send-guides.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em})})
+            .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+            .then(function(){window.location='/guides/?sent=1'})
+            .catch(function(){
+              msg.style.display='block';msg.style.color='#f87171';msg.textContent='Something went wrong. Please try again.';
+              btn.disabled=false;btn.textContent='Send Me the Guides';
+            });
+          });
+          </script>
         </div>
       </div>
     </section>
@@ -156,6 +171,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/products/">Products</a></li>
           <li><a href="/blog/">Blog</a></li>
+          <li><a href="/guides/">Guides</a></li>
           <li><a href="#why-us">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

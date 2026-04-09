@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 5-Minute AI Agent Setup Guide | Cortex Skills</title>
+  <meta name="description" content="Set up your first AI agent in 5 minutes using OpenClaw, Claude, or ChatGPT." />
+  <style>
+    :root{--bg:#0B1120;--primary:#7C3AED;--accent:#22D3EE;--cta:#F59E0B;--text:#F1F5F9;--muted:#94A3B8;--card:#111827;--border:rgba(124,58,237,.28)}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65} a{color:var(--accent)}
+    .wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px}.hero,.card{background:linear-gradient(180deg,rgba(124,58,237,.12),rgba(17,24,39,.88));border:1px solid var(--border);border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+    .hero{padding:32px}.card{padding:24px;margin-top:20px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:700}.pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(34,211,238,.1);color:var(--accent);font-size:13px}
+    h1,h2,h3{line-height:1.15;margin:0 0 12px} h1{font-size:42px} h2{font-size:28px;margin-top:8px} h3{font-size:20px} p,li{color:var(--text)} .muted{color:var(--muted)}
+    ul,ol{padding-left:22px} .grid{display:grid;gap:16px}.two{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.cta{display:inline-block;margin-top:18px;padding:14px 18px;background:var(--cta);color:#1f1302;text-decoration:none;border-radius:999px;font-weight:700}
+    code{background:#020617;padding:2px 6px;border-radius:6px;color:#c4b5fd}.footer{margin-top:24px;font-size:14px;color:var(--muted)} @media print{.cta{display:none}.wrap{padding:0} body{background:#fff;color:#111}.hero,.card{box-shadow:none;border:1px solid #ddd}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Free Guide 1</div>
+      <h1>The 5-Minute AI Agent Setup Guide</h1>
+      <p class="muted">A fast, practical setup for your first useful AI agent without turning it into a weekend project.</p>
+      <p><span class="pill">Works with OpenClaw, Claude, and ChatGPT</span></p>
+    </section>
+
+    <section class="card">
+      <h2>What an AI agent actually is</h2>
+      <p>An AI agent is just an assistant with three things: a role, a job, and enough context to do the job well. Most people overcomplicate this. You do not need a giant architecture diagram to get value on day one.</p>
+      <div class="grid two">
+        <div>
+          <h3>Role</h3>
+          <p>Who the agent is. Example: research assistant, inbox triage assistant, content editor.</p>
+        </div>
+        <div>
+          <h3>Job</h3>
+          <p>What the agent must do repeatedly. Example: summarize calls, draft follow-ups, clean notes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>The 5-minute setup</h2>
+      <ol>
+        <li><strong>Pick one use case.</strong> Start with a repetitive task you already hate doing.</li>
+        <li><strong>Name the agent.</strong> Example: “Ops Assistant” or “Daily Brief Builder.”</li>
+        <li><strong>Write a one-paragraph identity.</strong> Tell it who it is, who it serves, and what good work looks like.</li>
+        <li><strong>Add constraints.</strong> What it should never do matters as much as what it should do.</li>
+        <li><strong>Give it one real task.</strong> Not five. One.</li>
+        <li><strong>Test, tighten, repeat.</strong> If it rambles, tighten the prompt. If it guesses, add rules.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Starter prompt template</h2>
+      <p>Use this almost anywhere:</p>
+      <p><code>You are my [ROLE]. Your job is to [OUTCOME]. Prioritize [PRIORITIES]. Never [RULES]. Write in this style: [TONE]. When details are missing, [BEHAVIOR].</code></p>
+      <p>Example:</p>
+      <p><code>You are my meeting recap assistant. Your job is to turn messy notes into a clean action summary. Prioritize clarity, owners, deadlines, and risks. Never invent facts. Write in short bullet points. When details are missing, flag them clearly.</code></p>
+    </section>
+
+    <section class="card">
+      <h2>Best setup by platform</h2>
+      <div class="grid two">
+        <div>
+          <h3>OpenClaw</h3>
+          <ul>
+            <li>Best when you want tools, memory, and multi-agent workflows.</li>
+            <li>Use a strong role file and clear safety boundaries.</li>
+            <li>Great for operations, automation, and real execution.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Claude or ChatGPT</h3>
+          <ul>
+            <li>Best when you want a fast assistant without deeper system wiring.</li>
+            <li>Use a custom GPT or saved project instructions.</li>
+            <li>Great for drafting, thinking, summarizing, and iteration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Three mistakes to avoid</h2>
+      <ul>
+        <li><strong>Too broad:</strong> “Help me with my business” is useless. Narrow wins.</li>
+        <li><strong>No rules:</strong> If you do not define boundaries, the model will improvise. Badly.</li>
+        <li><strong>No examples:</strong> One good example beats five vague instructions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Day-one win checklist</h2>
+      <ul>
+        <li>One clear role</li>
+        <li>One measurable output</li>
+        <li>One tone/style rule</li>
+        <li>Three “never do this” rules</li>
+        <li>One real-world test</li>
+      </ul>
+      <a class="cta" href="/guides/">Get the full free guide bundle</a>
+      <div class="footer">Cortex Skills, practical AI systems for real work.</div>
+    </section>
+  </div>
+</body>
+</html>

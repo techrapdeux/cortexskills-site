@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Guides | Cortex Skills</title>
+  <meta name="description" content="Three free guides to get more out of AI agents without wasting a weekend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .guide-grid{display:grid;gap:1.25rem;margin-top:2rem}
+    .guide-card{display:block;text-decoration:none;color:inherit;padding:1.5rem;transition:transform .2s,border-color .2s}
+    .guide-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .guide-num{font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+    .guide-card h3{margin:.5rem 0 .4rem;font-size:1.3rem}
+    .guide-card p{color:var(--muted);font-size:.95rem}
+    .success-banner{background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.3);border-radius:16px;padding:1.25rem;margin-bottom:1.5rem;text-align:center;display:none}
+    .success-banner.show{display:block}
+    .success-banner p{color:var(--accent);font-weight:600}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/"><img src="/logo.png" alt="Cortex Skills" class="nav-logo" /> Cortex Skills</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
+        <a href="/guides/">Guides</a>
+        <a href="/blog/">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <div id="success-banner" class="success-banner">
+          <p>Check your inbox — your free guides are on the way.</p>
+        </div>
+
+        <p class="eyebrow">Free starter pack</p>
+        <h1>3 Free AI Guides</h1>
+        <p style="color:var(--muted);max-width:60ch">Sharp, practical guides to help you get more out of AI agents without turning it into a weekend research project.</p>
+
+        <div class="guide-grid">
+          <a href="/guides/guide-1-agent-setup.html" class="glass-card guide-card">
+            <span class="guide-num">Guide 01</span>
+            <h3>The 5-Minute AI Agent Setup Guide</h3>
+            <p>Go from zero to a working AI agent in 5 minutes. OpenClaw, Claude, or ChatGPT — pick your platform and ship.</p>
+          </a>
+
+          <a href="/guides/guide-2-master-prompt.html" class="glass-card guide-card">
+            <span class="guide-num">Guide 02</span>
+            <h3>The Master Prompt Formula</h3>
+            <p>The RCETO framework for writing prompts that actually work, on any platform, every time.</p>
+          </a>
+
+          <a href="/guides/guide-3-daily-workflow.html" class="glass-card guide-card">
+            <span class="guide-num">Guide 03</span>
+            <h3>The Daily AI Workflow Cheatsheet</h3>
+            <p>A tested daily routine that saves 2+ hours using AI agents for email, meetings, research, and deep work.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="/logo.png" alt="Cortex Skills" class="nav-logo" /> Cortex Skills</a>
+        <p class="footer-tagline">Built by a founder running 34 AI agents.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://x.com/cortexskills">@cortexskills</a></li>
+          <li><a href="https://instagram.com/cortexskillsai">@cortexskillsai</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (location.search.includes('sent=1')) {
+      document.getElementById('success-banner').classList.add('show');
+    }
+  </script>
+</body>
+</html>
