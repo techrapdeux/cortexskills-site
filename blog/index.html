@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Cortex Skills</title>
+  <meta name="description" content="Founder notes, AI operator tactics, and behind-the-scenes build logs from Cortex Skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <style>
+    :root {
+      --bg: #0B1120;
+      --panel: rgba(15, 23, 42, 0.82);
+      --primary: #7C3AED;
+      --cta: #F59E0B;
+      --text: #F1F5F9;
+      --muted: #CBD5E1;
+      --border: rgba(148, 163, 184, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 35%), var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header, .site-footer { border-bottom: 1px solid var(--border); background: rgba(11, 17, 32, 0.9); }
+    .site-footer { border-top: 1px solid var(--border); border-bottom: 0; margin-top: 72px; }
+    .nav-wrap, .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+    .nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav a, .footer-links a { color: var(--muted); }
+    .nav a:hover, .footer-links a:hover, .post-card a:hover { color: var(--text); }
+    .hero { padding: 72px 0 28px; }
+    .eyebrow { color: var(--cta); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; font-weight: 700; }
+    h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.2rem, 4vw, 4rem); margin: 12px 0 16px; }
+    .lead { max-width: 700px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
+    .post-grid { display: grid; gap: 24px; padding: 24px 0 0; }
+    .post-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(2, 6, 23, 0.35);
+    }
+    .post-meta { color: var(--cta); font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
+    h2 { margin: 12px 0 10px; font-size: 1.6rem; }
+    .post-card p { color: var(--muted); line-height: 1.7; margin: 0 0 18px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cta);
+      color: #0B1120;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .coming-soon {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border: 1px dashed rgba(245, 158, 11, 0.45);
+      border-radius: 18px;
+      color: var(--muted);
+      background: rgba(124, 58, 237, 0.08);
+    }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 720px) {
+      .nav-wrap, .footer-grid { flex-direction: column; align-items: flex-start; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/"><span>Cortex Skills</span></a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#why-us">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Founder notes</p>
+      <h1>The Cortex Skills blog</h1>
+      <p class="lead">Build logs, operator lessons, product thinking, and the occasional scar tissue report from running AI agents in public.</p>
+    </section>
+
+    <section class="post-grid">
+      <article class="post-card">
+        <div class="post-meta">Post 001 • Live now</div>
+        <h2><a href="/blog/post-001.html">How I'm Building a Business With 34 AI Agents (From $250)</a></h2>
+        <p>A clean founder story about leverage, constraints, and why Cortex Skills is built for operators instead of tourists.</p>
+        <a class="btn" href="/blog/post-001.html">Read post</a>
+      </article>
+    </section>
+
+    <section class="coming-soon">
+      Next up: future posts will land here automatically once Don ships them. Nice little pipe, no drama.
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand" href="/">Cortex Skills</a>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://x.com/cortexskills">X</a>
+        <a href="https://instagram.com/cortexskillsai">Instagram</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
