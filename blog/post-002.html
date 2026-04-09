@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What the FreeCodeCamp OpenClaw Guide Didn't Tell You | Cortex Skills</title>
+  <meta name="description" content="The missing layer after the tutorial: what .htaccess actually does, why SOUL.md quality determines agent quality, and the security steps most OpenClaw builders skip." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+</head>
+<body>
+  <article>
+    <p><strong>What the FreeCodeCamp OpenClaw Guide Didn't Tell You</strong></p>
+
+    <p>The FreeCodeCamp guide on building and securing a personal AI agent with OpenClaw is a strong starting point. It gives people a real architecture, a real loop, and a much better frame than the usual “paste one prompt and pray” garbage floating around AI Twitter.</p>
+
+    <p>But there is a difference between getting an agent to work and getting an agent ready for the real world.</p>
+
+    <p>That second part is where most builders get blindsided.</p>
+
+    <p>The tutorial teaches structure. What it cannot fully teach in one article is the production layer: the security rules that belong at the server edge, the identity rules that stop an agent from drifting, and the boring but critical controls that separate a cool demo from a reliable system.</p>
+
+    <p>Let’s start with the most misunderstood one: <code>.htaccess</code>.</p>
+
+    <p>In plain language, <code>.htaccess</code> is a rules file for your web server. It tells the server what to allow, what to block, what to redirect, and what protective headers to send before your application ever gets touched.</p>
+
+    <p>That matters because many people treat security like an app-only problem. It is not. If your OpenClaw gateway or related site is publicly reachable, the first layer of defense should start before the request reaches the app.</p>
+
+    <p>Without that layer, you are trusting defaults. Defaults are generous. The internet is not.</p>
+
+    <p>A publicly exposed agent setup without server-level rules creates obvious risk. Traffic might still reach the site over plain HTTP. Browsers may not get the security headers they should. Sensitive files or routes may be more reachable than you think. Scanners and bots can probe predictable paths all day. Even low-grade abuse can create noise, cost, or instability.</p>
+
+    <p>This is why <code>.htaccess</code> matters so much in an AI agent deployment. Not because it is glamorous. Because it lets you set baseline rules like:</p>
+
+    <p>Force HTTPS. Add defensive browser headers. Disable directory listing. Deny access to hidden or sensitive files. Restrict direct access patterns that should never be public.</p>
+
+    <p>That is the stuff most people skip because it feels less exciting than the agent itself. Unfortunately, that is also the stuff attackers, scrapers, and random internet weirdos appreciate you skipping.</p>
+
+    <p>For Cortex Skills, our own web hardening approach focused on a simple principle: the public site should expose only what a public visitor actually needs. That means secure redirects, safer defaults, tighter access behavior, and fewer opportunities for the server to reveal something it never needed to reveal in the first place.</p>
+
+    <p>Now for the part most people underestimate even more than server security: <strong>SOUL.md</strong>.</p>
+
+    <p>If you build with OpenClaw long enough, you learn one thing very quickly. Your agent is only as good as its identity layer.</p>
+
+    <p>Beginners usually write SOUL.md like a personality profile. They give the agent a name, a tone, maybe a few values, and call it a day. That can make the outputs feel more interesting. It does not make them reliably better.</p>
+
+    <p>A production-grade SOUL.md does something else. It defines mission, authority, boundaries, decision order, and non-negotiables. It tells the agent what it is optimizing for, when it can act on its own, when it must ask first, and what it should never do even if a prompt nudges it there.</p>
+
+    <p>That is the difference between an agent that does what you want and an agent that does what it thinks you want.</p>
+
+    <p>One follows a stable operating identity. The other chases the latest instruction with a smile on its face.</p>
+
+    <p>This is where the concept of identity permanence matters. In real use, agents do not stay in one neat little scenario. They jump between planning, drafting, problem-solving, admin work, and edge cases the builder did not think about. If the identity file is shallow, the agent drifts. It becomes generic, overly agreeable, or weirdly inconsistent depending on what happened three prompts ago.</p>
+
+    <p>A strong SOUL.md prevents that by anchoring durable rules. Who the agent serves. What the mission is. What gets prioritized first. Where autonomy ends. Where escalation begins.</p>
+
+    <p>And no, this is not just style polish. This is operational control.</p>
+
+    <p>The strongest agent builders learn that behavior comes less from clever wording and more from instruction hierarchy. Mission beats mood. Boundaries beat adjectives. Decision rules beat lore.</p>
+
+    <p>That brings us to the security steps most tutorials still underplay.</p>
+
+    <p>First, prompt injection defense. If your agent can be redirected by random instructions pasted into untrusted content, you do not have an obedient assistant. You have a very enthusiastic liability. Your identity files should explicitly state what sources are untrusted, what instructions the agent must ignore, and which safeguards override convenience.</p>
+
+    <p>Second, skill auditing. Installing community skills blindly is not much different from installing random software just because somebody in a Discord server said it was “fire.” A serious builder checks what a skill can access, what it writes, what external calls it makes, and whether the claimed behavior matches the actual behavior.</p>
+
+    <p>Third, least exposure. Not every route should be public. Not every file should be reachable. Not every convenience feature belongs on a live deployment. If it does not need public access, keep it behind a tighter boundary.</p>
+
+    <p>The tutorial gets people into the room. Good. That is useful. But production readiness starts when you stop asking, “Does it run?” and start asking, “What happens when the internet touches it?”</p>
+
+    <p>That is where better server rules, stronger identity files, and basic security discipline stop being optional.</p>
+
+    <p>We built production-ready versions of everything this article describes. Browse the Cortex Skills toolkit.</p>
+
+    <p><a href="https://cortexskills.com/products/">Browse the Cortex Skills toolkit at cortexskills.com/products/</a>.</p>
+  </article>
+</body>
+</html>
