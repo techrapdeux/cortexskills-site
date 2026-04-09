@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Cortex Skills</title>
-  <meta name="description" content="Founder notes, AI operator tactics, and behind-the-scenes build logs from Cortex Skills." />
+  <meta name="description" content="Editorial notes, AI operator tactics, founder build logs, and practical deployment lessons from Cortex Skills." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://cortexskills.com/blog/" />
+  <meta property="og:title" content="Cortex Skills Blog" />
+  <meta property="og:description" content="Editorial notes, AI operator tactics, founder build logs, and practical deployment lessons from Cortex Skills." />
+  <meta property="og:image" content="https://cortexskills.com/logo.png" />
+  <meta property="og:url" content="https://cortexskills.com/blog/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cortex Skills Blog" />
+  <meta name="twitter:description" content="Editorial notes, AI operator tactics, founder build logs, and practical deployment lessons from Cortex Skills." />
+  <meta name="twitter:image" content="https://cortexskills.com/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,78 +23,94 @@
   <style>
     :root {
       --bg: #0B1120;
-      --panel: rgba(15, 23, 42, 0.82);
+      --surface: #141D2F;
       --primary: #7C3AED;
+      --accent: #22D3EE;
       --cta: #F59E0B;
       --text: #F1F5F9;
-      --muted: #CBD5E1;
-      --border: rgba(148, 163, 184, 0.18);
+      --muted: #8B9CB6;
+      --border: rgba(139,156,182,.18);
+      --shadow: 0 20px 45px rgba(2,6,23,.35);
+      --max: 1200px;
     }
     * { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'DM Sans', sans-serif;
-      background: radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 35%), var(--bg);
-      color: var(--text);
-      min-height: 100vh;
+      margin: 0; font-family: 'DM Sans', sans-serif; color: var(--text);
+      background: radial-gradient(circle at top left, rgba(124,58,237,.22), transparent 30%), radial-gradient(circle at top right, rgba(34,211,238,.11), transparent 20%), var(--bg);
     }
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
-    .site-header, .site-footer { border-bottom: 1px solid var(--border); background: rgba(11, 17, 32, 0.9); }
-    .site-footer { border-top: 1px solid var(--border); border-bottom: 0; margin-top: 72px; }
-    .nav-wrap, .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
-    .nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    .nav a, .footer-links a { color: var(--muted); }
-    .nav a:hover, .footer-links a:hover, .post-card a:hover { color: var(--text); }
-    .hero { padding: 72px 0 28px; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .site-header, .site-footer { background: rgba(11,17,32,.9); border-bottom: 1px solid var(--border); }
+    .site-footer { margin-top: 72px; border-top: 1px solid var(--border); border-bottom: 0; }
+    .nav-wrap, .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+    .nav-logo { width: 36px; height: 36px; border-radius: 10px; }
+    .nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    .nav a, .footer-grid a { color: var(--muted); }
+    .nav a:hover, .footer-grid a:hover, .card:hover h3 { color: var(--text); }
+    .hero { padding: 72px 0 30px; }
     .eyebrow { color: var(--cta); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; font-weight: 700; }
-    h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.2rem, 4vw, 4rem); margin: 12px 0 16px; }
-    .lead { max-width: 700px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
-    .post-grid { display: grid; gap: 24px; padding: 24px 0 0; }
-    .post-card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 20px 45px rgba(2, 6, 23, 0.35);
+    h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.02; margin: 12px 0 18px; max-width: 11ch; }
+    .lead { max-width: 60ch; color: #d9e2ef; font-size: 1.12rem; line-height: 1.75; }
+    .featured {
+      margin-top: 28px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: stretch;
+      background: linear-gradient(135deg, rgba(20,29,47,.95), rgba(15,23,42,.85)); border: 1px solid rgba(124,58,237,.22); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow);
     }
-    .post-meta { color: var(--cta); font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
-    h2 { margin: 12px 0 10px; font-size: 1.6rem; }
-    .post-card p { color: var(--muted); line-height: 1.7; margin: 0 0 18px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--cta);
-      color: #0B1120;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
+    .featured-visual {
+      min-height: 320px; background: linear-gradient(135deg, rgba(124,58,237,.45), rgba(34,211,238,.14));
+      padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
     }
-    .coming-soon {
-      margin-top: 28px;
-      padding: 20px 22px;
-      border: 1px dashed rgba(245, 158, 11, 0.45);
-      border-radius: 18px;
-      color: var(--muted);
-      background: rgba(124, 58, 237, 0.08);
+    .featured-visual .chip, .meta-chip {
+      display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 700;
+      background: rgba(124,58,237,.14); color: #ddd6fe; width: fit-content;
     }
-    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .featured-visual .mini-title { font-size: 2rem; line-height: 1.15; max-width: 12ch; }
+    .featured-copy { padding: 34px; display: flex; flex-direction: column; justify-content: center; }
+    .featured-copy h2 { margin: 14px 0 16px; font-size: clamp(1.9rem, 3.5vw, 3rem); line-height: 1.1; }
+    .meta-line { color: var(--muted); font-size: .98rem; }
+    .featured-copy p { color: #d9e2ef; line-height: 1.75; font-size: 1.06rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 999px; font-weight: 800; }
+    .btn-primary { background: var(--cta); color: #0B1120; }
+    .btn-secondary { border: 1px solid rgba(139,156,182,.2); color: var(--text); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 52px 0 22px; }
+    .section-head p { color: var(--muted); max-width: 52ch; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .card {
+      display: grid; gap: 0; background: rgba(20,29,47,.88); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow);
+    }
+    .thumb { min-height: 180px; padding: 22px; display: flex; align-items: flex-end; background: linear-gradient(135deg, rgba(124,58,237,.35), rgba(34,211,238,.12)); }
+    .thumb.security { background: linear-gradient(135deg, rgba(124,58,237,.5), rgba(34,211,238,.14)); }
+    .thumb.getting-started { background: linear-gradient(135deg, rgba(245,158,11,.35), rgba(124,58,237,.18)); }
+    .thumb-label { font-family: 'JetBrains Mono', monospace; color: rgba(241,245,249,.82); font-size: .9rem; }
+    .card-body { padding: 24px; }
+    .card-body h3 { margin: 14px 0 12px; font-size: 1.55rem; line-height: 1.2; }
+    .card-body p { margin: 0 0 20px; color: var(--muted); line-height: 1.72; }
+    .meta-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .meta-text { color: var(--muted); font-size: .94rem; }
+    .site-footer h4 { margin: 0 0 14px; }
+    .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .footer-tagline { color: var(--muted); max-width: 28ch; }
+    @media (max-width: 980px) {
+      .featured, .grid { grid-template-columns: 1fr; }
+      h1 { max-width: none; }
+    }
     @media (max-width: 720px) {
-      .nav-wrap, .footer-grid { flex-direction: column; align-items: flex-start; }
-      .hero { padding-top: 56px; }
+      .nav-wrap, .footer-grid, .section-head { flex-direction: column; align-items: flex-start; }
+      .hero { padding-top: 52px; }
+      .featured-copy, .thumb, .card-body { padding: 22px; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/"><span>Cortex Skills</span></a>
+      <a class="brand" href="/"><img src="/logo.png" alt="Cortex Skills" class="nav-logo" /> Cortex Skills</a>
       <nav class="nav">
         <a href="/">Home</a>
         <a href="/products/">Products</a>
         <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
         <a href="/#why-us">About</a>
         <a href="/#contact">Contact</a>
       </nav>
@@ -92,39 +119,97 @@
 
   <main class="container">
     <section class="hero">
-      <p class="eyebrow">Founder notes</p>
+      <div class="eyebrow">Editorial desk</div>
       <h1>The Cortex Skills blog</h1>
-      <p class="lead">Build logs, operator lessons, product thinking, and the occasional scar tissue report from running AI agents in public.</p>
+      <p class="lead">Founder notes, deployment lessons, operator tactics, and the kind of practical AI writing that survives first contact with real work.</p>
+
+      <article class="featured">
+        <div class="featured-visual">
+          <span class="chip">Featured post</span>
+          <div>
+            <div class="thumb-label">SECURITY / PRODUCTION / OPENCLAW</div>
+            <div class="mini-title">What the guide missed after the tutorial ended</div>
+          </div>
+        </div>
+        <div class="featured-copy">
+          <span class="meta-chip">Security</span>
+          <h2><a href="/blog/post-002.html">What the FreeCodeCamp OpenClaw Guide Didn't Tell You</a></h2>
+          <div class="meta-line">April 9, 2026 | 8 min read</div>
+          <p>The production layer most tutorials skip: server hardening, identity design, prompt injection defense, and the controls that separate a cool demo from a reliable system.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;">
+            <a class="btn btn-primary" href="/blog/post-002.html">Read featured post</a>
+            <a class="btn btn-secondary" href="/products/security-starter-kit.html">See related product</a>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="post-grid">
-      <article class="post-card">
-        <div class="post-meta">April 9, 2026 • Latest post</div>
-        <h2><a href="/blog/post-002.html">What the FreeCodeCamp OpenClaw Guide Didn't Tell You</a></h2>
-        <p>The security and configuration details most tutorials leave out.</p>
-        <a class="btn" href="/blog/post-002.html">Read post</a>
-      </article>
-      <article class="post-card">
-        <div class="post-meta">Post 001 • Live now</div>
-        <h2><a href="/blog/post-001.html">How I'm Building a Business With 34 AI Agents (From $250)</a></h2>
-        <p>A clean founder story about leverage, constraints, and why Cortex Skills is built for operators instead of tourists.</p>
-        <a class="btn" href="/blog/post-001.html">Read post</a>
-      </article>
-    </section>
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Latest stories</div>
+          <h2 style="margin:10px 0 0; font-size:2rem;">Operator notes worth reading</h2>
+        </div>
+        <p>Short on fluff, long on signal. Exactly how it should be.</p>
+      </div>
 
-    <section class="coming-soon">
-      Next up: future posts will land here automatically once Don ships them. Nice little pipe, no drama.
+      <div class="grid">
+        <article class="card">
+          <div class="thumb security">
+            <div class="thumb-label">Security | April 9, 2026</div>
+          </div>
+          <div class="card-body">
+            <div class="meta-row">
+              <span class="meta-chip">Security</span>
+              <span class="meta-text">8 min read</span>
+            </div>
+            <h3><a href="/blog/post-002.html">What the FreeCodeCamp OpenClaw Guide Didn't Tell You</a></h3>
+            <p>The missing production layer after the tutorial: .htaccess, SOUL.md quality, prompt injection defense, and smarter exposure control.</p>
+            <a class="btn btn-primary" href="/blog/post-002.html">Read post</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb getting-started">
+            <div class="thumb-label">Getting Started | April 9, 2026</div>
+          </div>
+          <div class="card-body">
+            <div class="meta-row">
+              <span class="meta-chip">Getting Started</span>
+              <span class="meta-text">8 min read</span>
+            </div>
+            <h3><a href="/blog/post-001.html">How I'm Building a Business With 34 AI Agents (From $250)</a></h3>
+            <p>A founder story about starting lean, building around proof, and using AI agents as leverage instead of theatre.</p>
+            <a class="btn btn-primary" href="/blog/post-001.html">Read post</a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="container footer-grid">
-      <a class="brand" href="/">Cortex Skills</a>
-      <div class="footer-links">
-        <a href="/products/">Products</a>
-        <a href="/blog/">Blog</a>
-        <a href="https://x.com/cortexskills">X</a>
-        <a href="https://instagram.com/cortexskillsai">Instagram</a>
+      <div>
+        <a class="brand" href="/"><img src="/logo.png" alt="Cortex Skills" class="nav-logo" /> Cortex Skills</a>
+        <p class="footer-tagline">Built by a founder running 34 AI agents.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/#why-us">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://x.com/cortexskills">@cortexskills</a></li>
+          <li><a href="https://instagram.com/cortexskillsai">@cortexskillsai</a></li>
+        </ul>
       </div>
     </div>
   </footer>

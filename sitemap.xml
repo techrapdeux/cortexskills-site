@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://cortexskills.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cortexskills.com/products/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cortexskills.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cortexskills.com/blog/post-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cortexskills.com/blog/post-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cortexskills.com/products/empire-directive.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cortexskills.com/products/sessionsync.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cortexskills.com/products/skillforge-pro.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cortexskills.com/products/security-starter-kit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
