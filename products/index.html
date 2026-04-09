@@ -1,104 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | Cortex Skills</title>
-  <meta name="description" content="Premium AI skills, prompts, and courses for serious operators." />
+
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /><title>Products | Cortex Skills</title><meta name='description' content='Premium AI operator products from Cortex Skills.' />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/">Cortex Skills</a>
-      <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/products/">Products</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#why-us">About</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="section product-hero">
-      <div class="container narrow centered">
-        <p class="eyebrow">Product lineup</p>
-        <h1>Five launch offers, wired and ready.</h1>
-        <p class="hero-copy">Same Stripe payment links, new brand system, much less accidental navy cosplay.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container product-grid">
-        <article class="glass-card product-card">
-          <span class="tag">OpenClaw</span>
-          <h3>Operator OS Starter Pack</h3>
-          <p>Mission control prompts, workflows, and high-output templates for fast-moving operators.</p>
-          <div class="price">$49</div>
-          <a class="btn btn-primary" href="https://buy.stripe.com/5kQdR30ju8zE0Dz0X15c400">Buy with Stripe</a>
-        </article>
-        <article class="glass-card product-card">
-          <span class="tag">Claude</span>
-          <h3>Executive Prompt System</h3>
-          <p>A clean decision-support pack for leaders, chiefs of staff, and founders.</p>
-          <div class="price">$79</div>
-          <a class="btn btn-primary" href="https://buy.stripe.com/cNi4gt3vGeY2ae92155c401">Buy with Stripe</a>
-        </article>
-        <article class="glass-card product-card">
-          <span class="tag">Cursor</span>
-          <h3>Builder Workflow Kit</h3>
-          <p>Prompt patterns and implementation helpers for shipping faster with coding agents.</p>
-          <div class="price">$99</div>
-          <a class="btn btn-primary" href="https://buy.stripe.com/7sYdR3feodTY861bBF5c402">Buy with Stripe</a>
-        </article>
-        <article class="glass-card product-card">
-          <span class="tag">ChatGPT</span>
-          <h3>Prompt Academy Foundations</h3>
-          <p>The practical course for writing prompts that actually survive production.</p>
-          <div class="price">$129</div>
-          <a class="btn btn-primary" href="https://buy.stripe.com/fZuaER1ny9DI4TPaxB5c403">Buy with Stripe</a>
-        </article>
-        <article class="glass-card product-card">
-          <span class="tag">Multi-Platform</span>
-          <h3>Comprehensive Education Bundle</h3>
-          <p>Templates, playbooks, and training assets spanning major AI platforms.</p>
-          <div class="price">$199</div>
-          <a class="btn btn-primary" href="https://buy.stripe.com/aFa7sF7LW17c71X6hl5c404">Buy with Stripe</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="/">Cortex Skills</a>
-        <p class="footer-tagline">Built by a founder running 34 AI agents.</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/products/">Products</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/#why-us">About</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Social</h4>
-        <ul>
-          <li><a href="https://x.com/cortexskills">@cortexskills</a></li>
-          <li><a href="https://instagram.com/cortexskillsai">@cortexskillsai</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+  <style>
+    .product-shell{padding:3rem 0 5rem;}
+    .product-cover,.content-card,.faq-card,.cta-panel,.download-card{background:rgba(20,29,47,.78);border:1px solid rgba(124,58,237,.22);box-shadow:0 24px 60px rgba(4,10,24,.45);border-radius:24px;}
+    .product-cover{padding:2rem;margin-bottom:1.5rem;}
+    .brand-lockup{display:flex;align-items:center;gap:.9rem;margin-bottom:1rem;}
+    .brand-lockup img{width:54px;height:54px;border-radius:14px;}
+    .subtitle{color:var(--accent);font-family:"JetBrains Mono",monospace;text-transform:uppercase;font-size:.82rem;letter-spacing:.04em;}
+    .toc{display:grid;gap:.55rem;padding-left:1rem;color:var(--muted);}
+    .content-stack{display:grid;gap:1rem;}
+    .content-card,.faq-card,.cta-panel,.download-card{padding:1.5rem;}
+    .prompt-block{white-space:pre-wrap;background:rgba(11,17,32,.94);border:1px solid rgba(124,58,237,.45);border-left:4px solid var(--primary);border-radius:18px;padding:1rem 1.1rem;font-family:"JetBrains Mono",monospace;font-size:.88rem;color:#dbe7ff;overflow:auto;max-height:none;}
+    .list-clean{margin:0;padding-left:1.2rem;color:var(--muted);}
+    .badge-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem;}
+    .badge{padding:.55rem .8rem;border-radius:999px;background:rgba(11,17,32,.7);border:1px solid rgba(34,211,238,.16);font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--text);}
+    .faq-grid,.detail-grid{display:grid;gap:1rem;}
+    .pricing{font-family:"Plus Jakarta Sans",Arial,sans-serif;font-size:2rem;color:var(--text);margin:.5rem 0 1rem;}
+    .muted-strong{color:var(--text);}
+    .trust-grid{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:1rem;}
+    .trust-item{padding:1rem;border-radius:18px;background:rgba(11,17,32,.55);border:1px solid rgba(139,156,182,.12);}
+    .footer-note{padding:2rem 0 3rem;text-align:center;color:var(--muted);}
+    @media print{body{background:#fff;color:#111}.site-header,.site-footer,.btn{display:none!important}.product-cover,.content-card,.faq-card{box-shadow:none;background:#fff;color:#111;border:1px solid #ddd}.prompt-block{background:#f7f7f7;color:#111;border-color:#ccc}.subtitle,.eyebrow,.tag{color:#555} p,li{color:#333}}
+  </style>
+</head><body>
+<header class='site-header'><div class='container nav-wrap'><a class='brand' href='/'><img class='nav-logo' src='/logo.png' alt='Cortex Skills logo' />Cortex Skills</a><nav class='nav'><a href='/'>Home</a><a href='/products/'>Products</a><a href='/blog/'>Blog</a></nav></div></header>
+<main><section class='section product-hero'><div class='container narrow centered'><p class='eyebrow'>Cortex Skills Products</p><h1>Premium digital systems for serious AI operators.</h1><p class='hero-copy' style='margin:0 auto;'>Three focused products. No fluff, no filler, no bargain-bin prompt sludge.</p></div></section><section class='section'><div class='container product-grid'><article class='glass-card product-card'><span class='tag'>The Complete AI Business Launch System</span><h3>The Empire Directive</h3><p>A founder-grade directive for turning an AI agent team into a disciplined business-building machine. Built to deploy immediately across modern AI platforms.</p><div class='price'>$27 CAD</div><div style='display:grid;gap:.75rem;'><a class='btn btn-secondary' href='/products/empire-directive.html'>View Product</a><a class='btn btn-primary' href='https://buy.stripe.com/14A9AN4zK3fk861cFJ5c408'>Buy Now</a></div></article><article class='glass-card product-card'><span class='tag'>Instant AI Conversation Intelligence</span><h3>SessionSync</h3><p>Turn chaotic AI threads into clean, topic-based reports you can actually reuse. Built to deploy immediately across modern AI platforms.</p><div class='price'>$17 CAD</div><div style='display:grid;gap:.75rem;'><a class='btn btn-secondary' href='/products/sessionsync.html'>View Product</a><a class='btn btn-primary' href='https://buy.stripe.com/9B6bIVaY8bLQ9a52155c409'>Buy Now</a></div></article><article class='glass-card product-card'><span class='tag'>Autonomous Skill Creation System for AI Agents</span><h3>SkillForge Pro</h3><p>A standing directive that teaches your AI to convert wins, fixes, prompts, and failures into reusable institutional knowledge. Built to deploy immediately across modern AI platforms.</p><div class='price'>$22 CAD</div><div style='display:grid;gap:.75rem;'><a class='btn btn-secondary' href='/products/skillforge-pro.html'>View Product</a><a class='btn btn-primary' href='https://buy.stripe.com/7sY9AN3vG4jodql8pt5c40a'>Buy Now</a></div></article></div></section></main><footer class='site-footer'><div class='container footer-grid'><div><a class='brand' href='/'><img class='nav-logo' src='/logo.png' alt='Cortex Skills logo' />Cortex Skills</a><p class='footer-tagline'>Master AI Agents. Any Platform. Any Skill Level.</p></div><div><h4>Products</h4><ul><li><a href='/products/empire-directive.html'>The Empire Directive</a></li><li><a href='/products/sessionsync.html'>SessionSync</a></li><li><a href='/products/skillforge-pro.html'>SkillForge Pro</a></li></ul></div></div></footer></body></html>

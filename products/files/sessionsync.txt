@@ -1,0 +1,361 @@
+CORTEX SKILLS — SESSIONSYNC
+====================================
+
+Instant AI Conversation Intelligence
+A Cortex Skills Product
+
+TABLE OF CONTENTS
+1. What This Is
+2. What Problem It Solves
+3. How It Works
+4. Why It Feels Different
+5. Best Use Cases
+6. Operator Notes
+7. The Exact Prompt
+8. FAQ
+
+WHAT THIS IS
+------------
+SessionSync is a cleanup layer for AI work. Instead of letting valuable conversations rot inside a giant thread, it converts them into structured topic reports that are easy to file, search, and revisit.
+
+WHAT PROBLEM IT SOLVES
+----------------------
+AI sessions are excellent at generating value and terrible at preserving it. SessionSync fixes that by extracting the useful parts, organizing them, and protecting key prompts from getting buried.
+
+HOW IT WORKS
+------------
+Run your normal session first. When the work is done, paste the SessionSync prompt at the end. Your AI identifies each topic, creates a report pair for every one, and tells you exactly what was captured.
+
+WHY IT FEELS DIFFERENT
+----------------------
+Most summary prompts give you one blob of recap text. SessionSync gives you structured, professional, multi-file documentation that feels like an actual operating asset.
+
+BEST USE CASES
+--------------
+Use it after debugging sessions, brainstorming runs, prompt development, client research calls, or any long thread that produced multiple outcomes you cannot afford to lose.
+
+OPERATOR NOTES
+--------------
+If you want a real searchable AI knowledge base over time, run SessionSync at the end of every serious session. It turns history into leverage.
+
+THE EXACT PROMPT
+----------------
+================================================================================
+                    THE CONVERSATION SUMMARY TOOLKIT
+               Instant Topic-Based Reports From Any AI Chat
+================================================================================
+
+                          PRODUCT GUIDE & PROMPT
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+  1. What This Is
+  2. What Problem It Solves
+  3. How It Works
+  4. Compatible Platforms
+  5. The Prompt
+  6. Tips & Tricks
+  7. Customization Guide
+  8. Frequently Asked Questions
+
+================================================================================
+1. WHAT THIS IS
+================================================================================
+
+This is a plug-and-play prompt that turns any AI conversation — no matter
+how long, messy, or multi-topic — into a set of organized, professional
+summary reports.
+
+You paste the prompt at the end of any chat session. Your AI reads the
+entire conversation, identifies every topic that was discussed, and
+generates a clean report for each one — both as a polished PDF and a
+lightweight text file.
+
+Every report follows the same 13-section structure so nothing gets
+missed and everything is easy to find later.
+
+================================================================================
+2. WHAT PROBLEM IT SOLVES
+================================================================================
+
+If you use AI regularly, you know this pain:
+
+  - You had a long conversation where you solved 5 different problems,
+    but now you can't find the one fix you need
+  - You built a great prompt or workflow during a chat, but it's buried
+    in a 200-message thread and you can't remember which session it was
+  - You figured out a step-by-step solution to something complex, but
+    you never documented it and now you have to re-solve it from scratch
+  - You work across multiple topics in one session and the important
+    decisions get lost in the noise
+
+This prompt fixes all of that in one paste. It extracts, organizes, and
+documents everything — automatically.
+
+================================================================================
+3. HOW IT WORKS
+================================================================================
+
+  Step 1: Have your normal AI conversation. Work on whatever you need.
+  Step 2: When you are done, paste the prompt at the end of the chat.
+  Step 3: Your AI scans the full conversation from top to bottom.
+  Step 4: It groups everything into distinct topics.
+  Step 5: For each topic, it generates a PDF and a TXT file containing
+          a structured 13-section report.
+  Step 6: If any prompts or templates were created during the chat,
+          they are preserved word-for-word in the reports (or in a
+          separate companion file if they are very long).
+  Step 7: You receive all files plus a quick summary of what was
+          captured and where to find it.
+
+================================================================================
+4. COMPATIBLE PLATFORMS
+================================================================================
+
+This prompt works with any AI platform that can:
+  - Read and analyze a full conversation thread
+  - Generate files (PDF, TXT, DOCX)
+
+Tested and confirmed on:
+  - Claude (claude.ai)
+  - ChatGPT (with file creation enabled)
+  - Any AI platform with document generation capabilities
+
+It also works on AI agent platforms like:
+  - OpenClaw
+  - AutoGPT
+  - CrewAI
+  - Custom GPT setups
+
+If your AI can read a conversation and create files, this prompt works.
+
+================================================================================
+5. THE PROMPT
+================================================================================
+
+Copy everything between the START and END markers below.
+Paste it at the end of any AI conversation you want summarized.
+
+--- PROMPT START ---
+
+Please analyze this entire conversation and generate a comprehensive summary report. Follow these instructions exactly:
+
+STEP 1 — IDENTIFY TOPICS
+Scan the full conversation from top to bottom. Group everything discussed into distinct topics. A "topic" is a self-contained subject, problem, task, or project that was worked on. If we jumped between subjects, each subject is its own topic. List the topics you found before generating anything.
+
+STEP 2 — FOR EACH TOPIC, CREATE TWO FILES
+For every topic, generate both:
+  a) A PDF file named: "Topic_Summary_[Short_Topic_Name].pdf"
+  b) A plain text file named: "Topic_Summary_[Short_Topic_Name].txt"
+
+Both files must contain the same content. The PDF is the polished version for reading and archiving. The TXT is the lightweight version for quick reference, pasting, searching, or sharing.
+
+STEP 3 — EACH FILE MUST INCLUDE THESE SECTIONS (in order):
+
+  1.  Topic Title — Clear, descriptive name of what was discussed
+  2.  Date — Today's date
+  3.  Overview — 2-3 sentence summary of what this topic was about
+  4.  How We Got Here — What triggered this conversation? What was the starting point or context? What led us to discuss this?
+  5.  The Problem / Challenge — What was the issue, question, or goal? Be specific. Include any error messages, pain points, or requirements that were mentioned.
+  6.  Discussion & Exploration — Key back-and-forth points. What options were considered? What was debated or clarified? Include any important questions I asked and the answers given.
+  7.  Recommended Solution — The final answer, recommendation, or approach that was landed on.
+  8.  Reasoning — Why was this the best solution? What made it better than alternatives?
+  9.  Step-by-Step Solution — If a step-by-step guide, instructions, or implementation plan was provided, include the full steps here. If no steps were given, write "N/A — No step-by-step solution was provided for this topic."
+  10. Prompts Created — SEE SPECIAL RULES BELOW
+  11. Key Decisions Made — Bullet list of any decisions, choices, or confirmations that were locked in.
+  12. Open Items / Next Steps — Anything left unresolved, flagged for follow-up, or mentioned as a future task.
+  13. Files Created — List any files, documents, or deliverables that were produced during this topic. If none, write "N/A."
+
+SPECIAL RULES FOR SECTION 10 — PROMPTS CREATED:
+
+  - Every prompt, template, script, code snippet, or reusable text that was created during this topic MUST be reproduced in full, exactly as it was written — word for word. Do NOT summarize, paraphrase, or shorten prompts. Copy them as-is.
+
+  - If the prompt(s) fit comfortably within the report (roughly under 2 pages of prompt content), include them directly in both the PDF and TXT files under Section 10.
+
+  - If a single prompt is very long OR there are multiple prompts that together would take up more than 2 pages, then:
+      * Include a short summary of each prompt in the PDF and TXT files (1-2 sentences describing what it does)
+      * Create a separate companion file named "Prompts_[Short_Topic_Name].docx" (Word file) containing ALL the full prompts, clearly labeled and separated
+      * Reference this companion file in both the PDF and TXT so I know to look for it
+
+  - The companion file must include: a header with the topic name, each prompt labeled with a clear title or number, the full exact text of each prompt with no changes, and a brief note on what each prompt is for.
+
+  - When in doubt, create the separate file. It is better to have clean reports with a companion file than cluttered reports with pages of raw prompt text crammed in.
+
+FORMATTING RULES:
+
+  For the PDF:
+  - Professional, clean layout with clear headings
+  - Use a readable font (Helvetica or similar)
+  - Include page numbers
+  - Keep language simple and direct — no fluff
+
+  For the TXT:
+  - Use plain text formatting with clear section headers in ALL CAPS
+  - Use divider lines (---) between sections for readability
+  - No special characters that break in basic text editors
+  - Keep it clean and scannable
+
+  For both:
+  - If a section has nothing to report, include the section header with "N/A" so nothing looks missing
+  - Each topic gets its own standalone pair of files (one PDF + one TXT) — do not combine topics
+
+OUTPUT:
+Generate all files — every topic should have a PDF, a TXT, and a companion .docx if long prompts required one. Present them all to me. Give me a quick text summary listing:
+  - The topics you found
+  - Which files cover which topic
+  - Which topics have a separate companion prompt file
+
+--- PROMPT END ---
+
+================================================================================
+6. TIPS & TRICKS
+================================================================================
+
+GETTING THE BEST RESULTS:
+
+  - Always paste the prompt at the very END of your conversation, after
+    all work is done. The AI needs the full conversation to scan.
+
+  - If your conversation is very long (50+ messages), your AI may need
+    to process in batches. Just confirm when it asks.
+
+  - The more detailed your original conversation, the better the
+    summaries. If you gave the AI context about why you needed
+    something, that context shows up in the "How We Got Here" section.
+
+FILTERING BY TOPIC:
+
+  - Add this line to the prompt if you only care about certain topics:
+    "Focus only on topics related to [YOUR SUBJECT HERE]"
+
+  - Example: "Focus only on topics related to API troubleshooting"
+    This skips unrelated chatter and only reports on what you need.
+
+CUSTOMIZING THE OUTPUT:
+
+  - Want only PDFs? Change Step 2 to remove the TXT instruction.
+  - Want only TXT? Change Step 2 to remove the PDF instruction.
+  - Want markdown instead of TXT? Replace "plain text file" with
+    "markdown file" and change the extension to .md
+
+USING THIS FOR TEAM DOCUMENTATION:
+
+  - After a team brainstorming session with AI, paste this prompt to
+    get an instant meeting summary with decisions and action items.
+  - Share the TXT files in Slack or Teams for quick reference.
+  - Archive the PDFs for project documentation.
+
+BUILDING A KNOWLEDGE BASE:
+
+  - Run this prompt at the end of every AI session. Over time, you
+    build a searchable library of everything you have worked on.
+  - Name your files consistently and store them in folders by project
+    or month.
+  - The "Open Items / Next Steps" section from old reports becomes
+    your starting point for future sessions.
+
+PROMPT PRESERVATION:
+
+  - If you create valuable prompts during a session, this toolkit
+    guarantees they are captured word-for-word — never lost.
+  - The companion .docx system keeps your main reports clean while
+    preserving long prompts in a separate, easy-to-find file.
+  - This is especially powerful for developers, prompt engineers, and
+    anyone building reusable AI workflows.
+
+ADVANCED: CHAINING WITH OTHER TOOLS:
+
+  - Pair this with a filing system or note-taking app. Auto-save TXT
+    files to Notion, Obsidian, or Google Drive for instant indexing.
+  - Use the PDF versions for client deliverables or project archives.
+  - Feed old summary reports back into new AI sessions to pick up
+    exactly where you left off.
+
+================================================================================
+7. CUSTOMIZATION GUIDE
+================================================================================
+
+The 13-section structure works for most use cases out of the box. But
+you can adapt it to your specific needs:
+
+ADD A SECTION:
+  Just add a new numbered item to the Step 3 list in the prompt.
+  Example: "14. Cost Estimate — If any costs or budget items were
+  discussed, include them here."
+
+REMOVE A SECTION:
+  Delete the numbered item from the Step 3 list. The AI will skip it.
+
+CHANGE THE FILE FORMATS:
+  Replace "PDF" and "TXT" in Step 2 with whatever formats your AI
+  platform supports. Options include: .md (markdown), .html, .docx,
+  .csv (for structured data).
+
+ADD BRANDING:
+  Add a line to the formatting rules: "Include [YOUR COMPANY NAME]
+  in the header of every PDF and the first line of every TXT file."
+
+CHANGE THE NAMING CONVENTION:
+  Modify the file naming pattern in Step 2 to match your system.
+  Example: "[DATE]_[PROJECT]_[Topic_Name].pdf"
+
+================================================================================
+8. FREQUENTLY ASKED QUESTIONS
+================================================================================
+
+Q: Does this work if my conversation only covered one topic?
+A: Yes. It will generate one PDF and one TXT for that single topic.
+   The prompt handles single-topic and multi-topic sessions the same.
+
+Q: What if my AI cannot create PDF files?
+A: Change Step 2 to only request TXT or markdown files. The structure
+   and content are the same regardless of file format.
+
+Q: Will this capture code I wrote during the session?
+A: Yes. Code appears in Section 9 (Step-by-Step Solution) if it was
+   part of a solution, and in Section 10 (Prompts Created) if it was
+   a reusable script or snippet. All code is preserved exactly as
+   written.
+
+Q: Can I use this with a custom GPT or AI agent?
+A: Yes. Paste it into the agent's system prompt or send it as a
+   message. Any AI that can read a conversation and produce files
+   will handle this prompt correctly.
+
+Q: How long of a conversation can it handle?
+A: It depends on your AI's context window. Most modern AI platforms
+   handle conversations up to 100,000+ tokens without issues. For
+   very long sessions, the AI may ask to process in batches.
+
+Q: Can I modify this prompt and resell it?
+A: Check the license terms you received with this purchase. The
+   prompt is designed to be customized for your own use.
+
+================================================================================
+                         END OF PRODUCT GUIDE
+================================================================================
+
+
+FAQ
+---
+Q: What does SessionSync actually do?
+A: It gives your AI one final instruction that scans the whole conversation, groups the work by topic, and produces structured summary files.
+
+Q: Does it only work with PDF output?
+A: No. The default asks for PDF and TXT, but you can adapt it to markdown, HTML, DOCX, or whatever your platform supports.
+
+Q: Will it preserve prompts exactly?
+A: Yes. That is one of the strongest parts of the system. Prompts are preserved word for word, with companion files when needed.
+
+Q: Can this handle messy multi-topic chats?
+A: That is the point. It was designed for long, chaotic sessions where important decisions would otherwise disappear.
+
+Q: Is this only for one-on-one chats?
+A: No. It also works well for brainstorming sessions, project reviews, and team documentation workflows.
+
+Q: What if my AI cannot generate PDFs?
+A: Switch the requested output format. The reporting structure still holds.
+
+cortexskills.com | A Cortex Skills Product
