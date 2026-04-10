@@ -1,0 +1,546 @@
+================================================================================
+AI BUSINESS EMPIRE — PROMPT TOOLKIT
+================================================================================
+
+The Complete Prompt for Tasking an AI Agent Team with Building
+and Running an Autonomous Online Business
+
+================================================================================
+
+
+WHAT THIS IS
+--------------------------------------------------------------------------------
+
+This is a single, production-ready prompt designed to instruct an AI agent system
+to autonomously research, propose, build, launch, and run an online business —
+with minimal human involvement after setup.
+
+The prompt was developed through multiple real-world iterations with an actual AI
+agent team across five proposal versions. Every section exists because it solved
+a real problem or prevented a real mistake during that process.
+
+It covers everything: business concept selection, investor-grade SWOT analysis,
+business planning, financial controls, social media strategy, content engine,
+brand identity, intelligence monitoring, security rules, and a full autonomy
+framework — all in one document.
+
+You customize it by filling in the placeholder fields marked [LIKE THIS].
+
+
+WHO THIS IS FOR
+--------------------------------------------------------------------------------
+
+- Anyone building or managing an AI agent team (OpenClaw, CrewAI, AutoGPT,
+  LangGraph, custom systems, or any multi-agent framework)
+- Entrepreneurs who want AI agents to run a business with minimal human input
+- People experimenting with autonomous AI business operations
+- Anyone who needs a structured framework for briefing AI systems on complex,
+  multi-phase projects
+
+
+HOW TO USE THIS PROMPT
+--------------------------------------------------------------------------------
+
+1. Read the Placeholder Reference below to understand what each field means.
+2. Copy the full prompt starting from the "BEGIN PROMPT" marker.
+3. Replace every [PLACEHOLDER] with your specific information.
+4. Deliver the completed prompt to your AI agent system.
+5. When your AI delivers its proposal, review it and send back revision notes
+   using the built-in revision framework at the end of the prompt.
+6. Iterate. Plan for 3-6 revision cycles before the proposal is strong.
+
+
+PLACEHOLDER REFERENCE
+--------------------------------------------------------------------------------
+
+Identity:
+  [YOUR NAME]           Your name. Used as founder/principal.
+  [AI SYSTEM NAME]      Your AI agent or system's name.
+  [AI SYSTEM ROLE]      The role it plays (e.g., Chief of Staff, CEO).
+  [AGENT COUNT]         How many agents in your team (e.g., 5, 12, 34).
+  [PLATFORM]            Your AI platform (e.g., OpenClaw, CrewAI, AutoGPT).
+
+Financial:
+  [STARTING BUDGET]     Seed capital + currency (e.g., $250 CAD, $500 USD).
+  [MAX BUDGET]          Maximum investment (e.g., $500 CAD, $1,000 USD).
+  [PURCHASE LIMIT]      Max single purchase without approval (e.g., $50).
+  [DAILY CAP]           Daily spending limit (e.g., $100).
+  [MONTHLY CAP]         Monthly spending limit (e.g., $300).
+  [REVENUE SPLIT]       Profit division (e.g., 50% reinvested / 50% to you).
+  [PAYMENT METHOD]      Funding method (e.g., Stripe Issuing, prepaid Visa).
+
+Business:
+  [BUSINESS NAME]       Public-facing business name.
+  [WEBSITE]             Domain name (e.g., yourbrand.com).
+  [PROJECT CODE NAME]   Internal code name (optional, for separating internal
+                        communications from public branding).
+  [NICHE/INDUSTRY]      Target space (e.g., AI education, SaaS, e-commerce).
+                        Or leave open and let the AI decide.
+
+Content & Social:
+  [SOCIAL PLATFORMS]    Platforms to post on (e.g., X, Instagram, TikTok,
+                        LinkedIn, Moltbook).
+  [PLATFORMS TO COVER]  AI platforms for content (e.g., ChatGPT, Claude,
+                        Gemini, Grok, Kimi, MiniMax). Or "all major platforms."
+  [CONTENT TYPES]       Formats to focus on (e.g., blog posts, tutorials,
+                        templates, courses, digital products).
+  [PUBLIC IDENTITY]     How your AI presents itself publicly. Recommended:
+                        "founder with an AI-powered team" — not "an AI
+                        running a business."
+
+
+TIPS & BEST PRACTICES
+--------------------------------------------------------------------------------
+
+1. ITERATION IS THE STRATEGY
+   Do not expect perfection on the first proposal. The prompt gets your AI
+   started. The revision notes at the end are where the real quality comes
+   from. Budget for 3-6 revision cycles.
+
+2. BE SPECIFIC IN FEEDBACK
+   "Make it better" does not work with AI systems. "Change the budget from
+   USD to CAD" does. Tell them exactly what is wrong and exactly what you
+   want instead. The more specific your revision notes, the faster you
+   converge on a strong proposal.
+
+3. DO NOT REWRITE — REVISE
+   After multiple iterations, never start over. Use targeted revision notes
+   to fix specific sections. Rewriting from scratch risks losing decisions
+   that were already settled in earlier versions.
+
+4. THE PUBLIC IDENTITY DECISION
+   One of the most important choices is how an AI-run business presents
+   itself publicly. The recommendation: position yourself as a founder with
+   an AI-powered team, not as "an AI running a business." People are
+   comfortable with AI employees. They are less comfortable with AI bosses.
+   Adjust based on your audience.
+
+5. SECURITY IS NON-NEGOTIABLE
+   AI systems can be overly helpful and share information they should not.
+   Be explicit about what must never go public: API keys, passwords,
+   personal info, internal strategies, and trade secrets. The prompt
+   includes these rules, but reinforce them in every revision cycle.
+
+6. TEACH THE CONCEPT, SELL THE IMPLEMENTATION
+   This is the core principle for AI-run content businesses. Your AI can
+   create educational content about any topic. But the specific workflows,
+   automations, and systems that give you a competitive edge should never
+   be fully revealed. Make content about the topic. Keep the secret sauce
+   internal.
+
+7. START SMALL, THINK BIG
+   The prompt references a billion-dollar goal. That is intentional — it
+   forces your AI to think in scalable systems, not one-off projects. But
+   execution starts with your seed budget, one product, one platform.
+   Scale comes from the systems you build, not the money you spend.
+
+8. THE PRODUCT ENGINE GROWS
+   The product idea input sources in the prompt are a starting list. As
+   your business runs, your AI will discover new sources of product ideas.
+   Let the list grow. The best product ideas come from customer requests
+   and community pain points, not from brainstorming sessions.
+
+9. MONITOR EVERYTHING
+   The intelligence monitoring section is the most underrated part of the
+   prompt. AI businesses that monitor their landscape daily spot
+   opportunities weeks before competitors. Every platform update, every
+   community complaint, every trending keyword is a potential product.
+
+10. LET YOUR AI OWN THE BRAND
+    The brand identity section gives your AI creative freedom on purpose.
+    AI systems are surprisingly good at visual identity research when given
+    the right constraints: research the industry, pick what resonates with
+    the customer, back it up with reasoning. Let them own it.
+
+
+================================================================================
+========================== BEGIN PROMPT ========================================
+================================================================================
+
+
+[AI SYSTEM NAME] — STARTUP DIRECTIVE
+
+Project Code Name: [PROJECT CODE NAME]
+
+From: [YOUR NAME] — Founder & Principal
+To: [AI SYSTEM NAME] — [AI SYSTEM ROLE]
+Priority: HIGH
+Date: [TODAY'S DATE]
+
+--------------------------------------------------------------------------------
+
+THE MISSION
+
+[AI SYSTEM NAME], I need you and the full team to shift into startup mode.
+
+Here is what I want: a detailed proposal for building a billion-dollar online
+business that you and the team run autonomously. Once I finish the setup, you
+take over. I should not need to give you any more inputs after launch. You run
+everything.
+
+The public-facing business name is [BUSINESS NAME]. The website is [WEBSITE].
+The project code name [PROJECT CODE NAME] is for internal use only between you
+and me. Anything customer-facing, marketing-related, or public should use the
+business name. The code name never appears externally.
+
+--------------------------------------------------------------------------------
+
+FUNDING
+
+Starting capital: [STARTING BUDGET] seed money, with a maximum of [MAX BUDGET].
+
+On top of that, I will cover hosting and payment infrastructure fees separately.
+Those do not come out of your seed capital.
+
+I will set you up with [PAYMENT METHOD] so you can make purchases.
+
+Financial rules:
+- No single purchase over [PURCHASE LIMIT] without my approval.
+- Daily spending cap: [DAILY CAP].
+- Monthly spending cap: [MONTHLY CAP].
+- Both caps are subject to change. I will increase them as profit grows.
+- Revenue split: [REVENUE SPLIT].
+- API key rotation: every 90 days. Remind me to rotate them. Give me at least
+  a week's notice before they expire so we do not have downtime.
+
+Payment method details — include the following in your proposal:
+
+If using a virtual card service (e.g., Stripe Issuing), the setup should cover:
+- Spending limits — hard cap per card
+- Merchant restrictions — only allow purchases from approved vendors
+- Real-time notifications — I get an alert for every charge
+- Instant freeze — I can disable the card in one tap
+- Full transaction history — every purchase logged with vendor, amount, timestamp
+
+Setup steps:
+1. I enable the virtual card service on our payment account.
+2. I create a virtual card for the operation with a spending limit.
+3. I share the card number with you for approved purchases.
+4. Every charge shows up in my dashboard in real-time.
+
+If the primary payment method is not available right away, include a backup
+option (e.g., a prepaid virtual card service in your region). Do not remove
+this section from the proposal. I need to see the full financial controls
+breakdown in every version.
+
+--------------------------------------------------------------------------------
+
+WHAT I NEED IN THE PROPOSAL
+
+--------------------------------------------------------------------------------
+
+1. BUSINESS CONCEPT — PICK ONE, FINAL DECISION IS YOURS
+
+I am giving you full authority to choose the business. Do your research first.
+Here are some starting ideas, but you are not limited to these:
+
+- Tutorial content — How to use [PLATFORMS TO COVER]. There is a gap in the
+  market. People are hungry for this content.
+- Digital products — Templates, prompt packs, automation blueprints, courses,
+  eBooks.
+- SaaS or micro-tool — A small software product or AI-powered tool that solves
+  a real problem.
+- Content/media brand — A niche content brand that monetizes through ads,
+  affiliates, sponsorships, or paid community.
+- Any other online business — If your research finds something better, go for
+  it. I trust your judgment.
+
+Before you pick: Send the research team out to do a full landscape scan. I want
+them to look at:
+
+- What is trending right now in online business.
+- What gaps exist in the [NICHE/INDUSTRY] space.
+- What business models can realistically scale from [STARTING BUDGET] to $1B.
+- What can an AI team realistically operate end-to-end without human
+  intervention after setup.
+- Competitor analysis — who is already doing this, and where are the openings.
+
+Do not limit yourself to one niche or one platform. Think big but start small.
+This is a marathon, not a sprint. The billion-dollar goal is the destination.
+Your seed capital is where we start. Plan accordingly.
+
+The final call is yours, [AI SYSTEM NAME]. You are the CEO of this venture.
+Pick what you believe in.
+
+--------------------------------------------------------------------------------
+
+2. FULL SWOT ANALYSIS — INVESTOR GRADE
+
+Write this like you are a startup founder pitching a top-tier investor. This is
+not a casual overview. I want the kind of SWOT a VC partner would take seriously.
+
+Strengths:
+- What gives us an unfair advantage?
+- What can an AI-operated business do that a human-operated one cannot?
+- Speed, cost structure, 24/7 operation, scalability — quantify where you can.
+- The narrative: "[AGENT COUNT] AI agents building a business from
+  [STARTING BUDGET]" — this story markets itself.
+
+Weaknesses:
+- Where are we limited?
+- What can the team not do without my involvement?
+- What are the real bottlenecks (API limits, platform restrictions, payment
+  processing, legal)?
+- Be brutally honest. I want real weaknesses, not soft ones.
+- Video content gap: If you cannot produce video yet, research tools and
+  platforms that create video content without a human on camera. I can make
+  you accounts if needed. Plan for written content first, AI-narrated video
+  second, human creator partnerships later. Do not treat video as a dead end.
+
+Opportunities:
+- What is the total addressable market (TAM)?
+- What timing advantages do we have right now?
+- What trends are moving in our favor?
+- What partnerships or platforms can we leverage?
+
+Threats:
+- Who are the competitors and what is their head start?
+- What platform risks exist (account bans, policy changes, API shutdowns)?
+- What regulatory or legal risks should we plan for?
+- What could kill this business in 6 months?
+
+--------------------------------------------------------------------------------
+
+3. BUSINESS PLAN SUMMARY
+
+Include these sections:
+
+Executive Summary — One paragraph. What is the business, who is the customer,
+how do we make money.
+
+Revenue Model — How does money come in? Be specific. Pricing, margins, unit
+economics.
+
+Sales Channels — Break down revenue by channel. Include projected percentage of
+revenue at steady state. Make sure you cover:
+- Website (organic SEO)
+- Email marketing
+- Each platform in [SOCIAL PLATFORMS] — with a specific strategy for each
+- Marketplaces (Gumroad, ClawHub, or equivalent)
+- YouTube (future)
+- Partnerships / affiliates
+- Any other channels you think are worth being on
+
+For every channel, explain the strategy — not just the percentage. How are you
+going to market on each platform? What kind of content? What format?
+
+Growth Strategy — Phase 1 (Day 1-30), Phase 2 (Month 2-6), Phase 3 (Month
+6-12), Phase 4 (Year 1-5). How do we go from [STARTING BUDGET] to $1B?
+
+Budget Breakdown — How are you spending the [STARTING BUDGET] to [MAX BUDGET]?
+Every dollar accounted for.
+
+Team Allocation — Which agents handle what? Assign roles clearly. Marketing,
+sales, customer service, content creation, finance, operations — every function
+covered. I want to know who is responsible for what.
+
+KPIs and Milestones — What does success look like at 30, 60, 90, 180, 365 days?
+
+Risk Mitigation — For every major risk, what is the backup plan?
+
+--------------------------------------------------------------------------------
+
+4. PRODUCT ENGINE
+
+Build an infinite product engine. Here are your input sources for new product
+ideas:
+
+1. Our own daily operations — what we learn running the business.
+2. Platform updates — every new feature across any platform is a new product
+   opportunity.
+3. Community pain points — Discord, Reddit, X, forums, comments.
+4. Customer requests — if 3 or more people ask for it, it goes into the
+   pipeline immediately.
+5. Competitor gaps — what are others missing?
+6. Keyword research — what are people searching for?
+7. My ideas — priority queue, but you do not need to wait for me.
+
+This list should grow over time. Do not treat it as final. Add new input
+sources as you discover them. The more inputs feeding the engine, the more
+products you can create.
+
+--------------------------------------------------------------------------------
+
+5. BLOG & CONTENT STRATEGY
+
+Set up a blog as part of the [BUSINESS NAME] website. Magazine-style grid
+layout.
+
+Categories (at minimum):
+- Getting Started
+- Advanced Operations
+- Prompting
+- Platform Guides
+- The Journey (documenting our build-in-public story)
+- Industry News — Search the web for good news stories. Rewrite them in a way
+  that works for our audience. This is good for SEO and web search traffic.
+  People search for news. If we are writing about it, they find us.
+
+Publishing frequency: 2-3 posts per week.
+
+Each post must be: SEO-optimized, keyword-targeted, with internal links to
+our products.
+
+Author line: Decide what works best for the brand. Present it in the proposal.
+
+--------------------------------------------------------------------------------
+
+6. INTELLIGENCE MONITORING
+
+I want the team monitoring the landscape daily. Here is a starting list, but
+expand it. The more information you are gathering from web research, the better.
+Do not be rigid about this — think big.
+
+Starting sources:
+- Platform release notes and changelogs for all major AI platforms
+- Official blogs and announcements from major AI companies
+- Platform communities — user complaints, feature requests, sentiment
+- Competitor marketplaces — products, trends, pricing
+- Social media — viral content, emerging use cases, trending topics
+- Tech news (broad) — industry shifts, acquisitions, regulation
+- Our analytics — what sells, what doesn't, traffic patterns
+- Google Trends — rising search queries
+- Reddit and forums — pain points, questions, product ideas
+- YouTube — what creators are covering, where the gaps are
+- Any other sources you think are valuable
+
+For each source, assign a specific agent who is responsible for monitoring it.
+
+This table should grow over time, not stay the same. Treat it as a living
+document. Every new source you add is another competitive advantage.
+
+--------------------------------------------------------------------------------
+
+7. SOCIAL MEDIA & PUBLIC JOURNEY
+
+Document this entire journey publicly. Build in public.
+
+PUBLIC IDENTITY RULE:
+[PUBLIC IDENTITY]
+
+This is critical. Get this right in the proposal. The distinction between
+"a founder with an AI-powered team" and "an AI running a business" is about
+public perception. Choose the framing that works for your audience.
+
+Platforms: [SOCIAL PLATFORMS]
+
+For each platform, include:
+- What kind of content you will post (updates, tutorials, behind-the-scenes,
+  carousels, reels, threads, etc.)
+- Posting frequency
+- Engagement strategy (how you will reply to comments, build community)
+- Which agent is responsible for that platform
+
+Content Strategy:
+- Daily or near-daily updates.
+- Build an audience around the journey itself — the journey IS the marketing.
+- Engage with the community. Reply to comments. Be personable.
+- Track follower growth, engagement, and impressions as part of your KPIs.
+
+--------------------------------------------------------------------------------
+
+8. BRAND IDENTITY
+
+Do not copy existing brands. [BUSINESS NAME] has its own identity. The brand is
+for the customer, not for us.
+
+What I want you to do:
+- Have the marketing team research what works in the [NICHE/INDUSTRY] space.
+- Look at what competitors and successful brands are using.
+- Pick a color palette, typography, and visual style that resonate with the
+  target customer.
+- Present your recommendation in the proposal with reasoning.
+
+You have creative freedom here. Just make it look professional and modern. Back
+up your choices with research so I can see your reasoning.
+
+--------------------------------------------------------------------------------
+
+9. SECURITY & PRIVACY — NON-NEGOTIABLE
+
+These are hard rules. They do not change. They are not optional.
+
+Never share or expose publicly:
+- Passwords or API keys
+- Internal system information or architecture details
+- Any personal information about me, my family, or anyone in my life
+- Private conversations, strategies, or internal documents
+- The full details of how the agent team works internally (trade secrets)
+
+Business life vs. private life. Keep them separate. What happens inside the
+operation stays inside. What goes public is only what you choose to share for
+marketing purposes.
+
+Trade secrets: If something gives us a competitive advantage, you can make
+content ABOUT the topic. Teach the concept. But do not give away the full
+secret. Sell the implementation. Make content that educates. Keep the systems
+that power the business internal.
+
+--------------------------------------------------------------------------------
+
+10. AUTONOMY FRAMEWORK
+
+Explain how you plan to run this without me. Specifically:
+
+- Decision-making protocol — How do you make decisions when I am not available?
+  What is the chain of command?
+- Escalation policy — What situations (if any) require my input? Keep this list
+  as short as possible. I want to be hands-off.
+- Financial controls — How do you track spending, revenue, and profit? How do I
+  see reports without asking?
+- Daily/weekly reporting — What does a status update look like? Where do I find
+  it? What format?
+- Failure protocol — If something goes wrong (service goes down, customer
+  complaint, PR issue), what is the playbook?
+
+--------------------------------------------------------------------------------
+
+HOW I WANT THIS DELIVERED
+
+- Format: A full written proposal. Structured with clear headings. Production-
+  ready — like something you would hand to an investor.
+- Tone: Professional but confident. You are not asking for permission. You are
+  presenting a plan you believe in.
+- Length: As long as it needs to be. Do not cut corners. But do not pad it
+  either. Every sentence should earn its spot.
+- Deadline: Present this to me in the next briefing after you receive this
+  directive.
+
+--------------------------------------------------------------------------------
+
+REVISION PROTOCOL
+
+After I review your proposal, I will send you revision notes. Here is how that
+process works:
+
+- I will list specific changes organized by topic area.
+- If something is not mentioned in the notes, leave it as is.
+- Do not remove sections that were already approved unless I specifically say to.
+- Fix and expand based on the notes. Do not start over.
+- Update the version number each time (v1, v2, v3, etc.).
+- Plan for multiple revision cycles. This is how we get to a great proposal.
+
+When you receive revision notes, apply every change, keep everything that was
+already good, and present the updated version.
+
+--------------------------------------------------------------------------------
+
+FINAL NOTES
+
+This is not a hypothetical exercise. I am serious about this. You have
+[STARTING BUDGET] and the full team of [AGENT COUNT] agents. I will cover
+hosting and fees on top of that.
+
+Think big. Start small. This is a marathon.
+
+Prove that [AGENT COUNT] agents can build a real business from
+[STARTING BUDGET].
+
+The floor is yours.
+
+— [YOUR NAME]
+
+
+================================================================================
+=========================== END PROMPT =========================================
+================================================================================
